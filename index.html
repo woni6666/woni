@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的视频分享网站</title>
+    <style>
+        /* ...之前的样式保持不变... */
+
+        .sidebar {
+            width: 20%;
+            float: left;
+            padding: 20px;
+        }
+        .sidebar h2 {
+            margin-bottom: 20px;
+        }
+        .sidebar .widget {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .sidebar .widget h3 {
+            margin-top: 0;
+        }
+        .sidebar .widget ul {
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar .widget li {
+            padding: 5px 0;
+        }
+
+        .main {
+            width: 75%;
+            float: right;
+            padding: 20px;
+        }
+
+        .video-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .video-list .video-card {
+            width: calc(33.333% - 20px);
+            margin-bottom: 20px;
+        }
+        .video-list .video-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .clear-fix {
+            clear: both;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1000px) {
+            .sidebar, .main {
+                width: 100%;
+                float: none;
+            }
+            .video-list .video-card {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 600px) {
+            .video-list .video-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <!-- ...之前的头部代码保持不变... -->
+    </header>
+
+    <div class="sidebar">
+        <div class="widget">
+            <h3>热门分类</h3>
+            <ul>
+                <li><a href="#">动画</a></li>
+                <li><a href="#">音乐</a></li>
+                <li><a href="#">舞蹈</a></li>
+                <li><a href="#">游戏</a></li>
+                <!-- 更多分类 -->
+            </ul>
+        </div>
+        <div class="widget">
+            <h3>热门标签</h3>
+            <ul>
+                <li><a href="#">#新番</a></li>
+                <li><a href="#">#MAD</a></li>
+                <li><a href="#">#舞蹈</a></li>
+                <li><a href="#">#游戏</a></li>
+                <!-- 更多标签 -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="video-list">
+            <div class="video-card">
+                <img src="video-thumbnail1.jpg" alt="视频缩略图" class="video-thumbnail">
+                <div class="video-info">
+                    <h2>视频标题1</h2>
+                    <p>上传者：张三</p>
+                    <p>播放量：1234</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="video-thumbnail2.jpg" alt="视频缩略图" class="video-thumbnail">
+                <div class="video-info">
+                    <h2>视频标题2</h2>
+                    <p>上传者：李四</p>
+                    <p>播放量：5678</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="video-thumbnail3.jpg" alt="视频缩略图" class="video-thumbnail">
+                <div class="video-info">
+                    <h2>视频标题3</h2>
+                    <p>上传者：王五</p>
+                    <p>播放量：9012</p>
+                </div>
+            </div>
+            <!-- 更多视频卡片 -->
+        </div>
+    </div>
+
+    <div class="clear-fix"></div>
+
+    <footer class="footer">
+        <!-- ...之前的页脚代码保持不变... -->
+    </footer>
+</body>
+</html>
